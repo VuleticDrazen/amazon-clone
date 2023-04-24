@@ -102,5 +102,88 @@ const showingNavigationDropdown = ref(false);
                 </div>
             </div>
         </div>
+
+        <main>
+            <div class="pt-[98px]"></div>
+            <slot />
+        </main>
+
+        <div class="w-full bg-white mt-10">
+            <div class="max-w-[1500px] mx-auto">
+                <div class="text-[23px] pt-4 font-extrabold">
+                    Recommended based on your shopping trends
+                </div>
+                <div class="flex justify-center items-stretch">
+                    <div class="p-4 text-center mx-auto">
+                        <div class="w-[158px] h-[150px] overflow-hidden">
+                            <img src="https://via.placeholder.com/158x150" alt="">
+                        </div>
+                        <div class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
+                            This is the test title
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="text-xs font-extrabold text-red-600 w-full text-left">$99.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-[#232F3E]">
+            <div class="bg-[#37475A] hover:bg-gray-600 w-full p-3.5 cursor-pointer text-white font-extrabold text-center">
+                Back to top
+            </div>
+            <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-white">
+                <ul>
+                    <li class="font-extrabold text-lg">Get to Know Us</li>
+                    <li class="hover:underline cursor-pointer">Careers</li>
+                    <li class="hover:underline cursor-pointer">About Amazon</li>
+                    <li class="hover:underline cursor-pointer">Investor Relations</li>
+                    <li class="hover:underline cursor-pointer">Amazon Devices</li>
+                    <li class="hover:underline cursor-pointer">Amazon Science</li>
+                </ul>
+                <div class="w-20"></div>
+
+                <ul>
+                    <li class="font-extrabold text-lg">Make Money with Us</li>
+                    <li class="hover:underline cursor-pointer">Sell products on Amazon</li>
+                    <li class="hover:underline cursor-pointer">Sell on Amazon Business</li>
+                    <li class="hover:underline cursor-pointer">Sell apps on amazon</li>
+                    <li class="hover:underline cursor-pointer">Become an Affiliate</li>
+                    <li class="hover:underline cursor-pointer">Advertise Your Products</li>
+                    <li class="hover:underline cursor-pointer">Self-Publish with Us</li>
+                    <li class="hover:underline cursor-pointer">Host an Amazon Hub</li>
+                </ul>
+                <div class="w-20"></div>
+                <ul>
+                    <li class="font-extrabold text-lg">Amazon Payment Methods</li>
+                    <li class="hover:underline cursor-pointer">Amazon.de Visa Card</li>
+                    <li class="hover:underline cursor-pointer">Shop with points</li>
+                    <li class="hover:underline cursor-pointer">Credit Card</li>
+                    <li class="hover:underline cursor-pointer">Gift Cards</li>
+                    <li class="hover:underline cursor-pointer">Payment by Invoice</li>
+                    <li class="hover:underline cursor-pointer">Direct Debit</li>
+                    <li class="hover:underline cursor-pointer">Amazon Currency Converter</li>
+                    <li class="hover:underline cursor-pointer"> Top Up Your Account</li>
+                </ul>
+                <div class="w-20"></div>
+
+                <ul>
+                    <li class="font-extrabold text-lg">Let Us Help You</li>
+                    <li class="hover:underline cursor-pointer">COVID-19 and Amazon</li>
+                    <li class="hover:underline cursor-pointer">Track Packages or View Orders</li>
+                    <li class="hover:underline cursor-pointer">Delivery Rates & Policies</li>
+                    <li class="hover:underline cursor-pointer">Returns & Replacements</li>
+                    <li class="hover:underline cursor-pointer">Recycling (including disposal of electrical and electronic equipment)</li>
+                    <li class="hover:underline cursor-pointer">Manage Your Content and Devices</li>
+                    <li class="hover:underline cursor-pointer">Amazon Mobile App</li>
+                    <li class="hover:underline cursor-pointer">Amazon Assistant</li>
+                    <li class="hover:underline cursor-pointer">Customer Service</li>
+                    <li class="hover:underline cursor-pointer">Cancel Vodafone contracts</li>
+                    <li class="hover:underline cursor-pointer">Accessibility</li>
+                </ul>
+            </div>
+        </footer>
+
     </div>
 </template>
