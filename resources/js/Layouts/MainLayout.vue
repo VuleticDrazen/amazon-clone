@@ -5,6 +5,7 @@ import MapMarketOutlineIcon from 'vue-material-design-icons/MapMarkerAccountOutl
 import MenuDownIcon from 'vue-material-design-icons/MenuDown.vue'
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue'
 import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue'
+import MenuIcon from 'vue-material-design-icons/Menu.vue'
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -25,10 +26,10 @@ const showingNavigationDropdown = ref(false);
                     <MapMarketOutlineIcon class="pt-2 -ml-1" fill-color="#f5f5f5"/>
                     <div>
                         <div class="text-[13px] text-gray-300 font-extrabold">
-                            <div>Delivery to John</div>
+                            <div>Delivery to Drazen</div>
                         </div>
                         <div class="text-[15px] text-white -mt-1.5 font-extrabold">
-                            <div>London test W2</div>
+                            <div>Podgorica, MNE</div>
                         </div>
                     </div>
                 </div>
@@ -98,6 +99,49 @@ const showingNavigationDropdown = ref(false);
                     </span>
                     <div class="flex items-center justify-center">
                         <CartMinusIcon fill-color="#FCFCFC" :size="40" class="-mt-0.5"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between bg-[#232f3e] h-[38px] mt-[60px] w-full min-w-[1150px] fixed z-40">
+            <div class="flex">
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <MenuIcon fill-color="#F5F5F5" :size="26" class="mr-0.5"/>
+                        <div class="text-white text-[14px] font-extrabold">All</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-white text-[14px] font-extrabold">Today's Deals</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-white text-[14px] font-extrabold">Gift Cards</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-white text-[14px] font-extrabold">Buy Again</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-white text-[14px] font-extrabold">Customer Service</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-white text-[14px] font-extrabold">Drazen's Amazon.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-white text-[14px] font-extrabold">Holiday Fashion Deals</div>
                     </div>
                 </div>
             </div>
