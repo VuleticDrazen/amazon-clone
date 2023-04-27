@@ -1,13 +1,16 @@
 <script setup>
 import {ref} from 'vue';
 import {Link} from '@inertiajs/vue3';
-import MapMarketOutlineIcon from 'vue-material-design-icons/MapMarkerAccountOutline.vue'
-import MenuDownIcon from 'vue-material-design-icons/MenuDown.vue'
-import MagnifyIcon from 'vue-material-design-icons/Magnify.vue'
-import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue'
-import MenuIcon from 'vue-material-design-icons/Menu.vue'
+import MapMarketOutlineIcon from 'vue-material-design-icons/MapMarkerAccountOutline.vue';
+import MenuDownIcon from 'vue-material-design-icons/MenuDown.vue';
+import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
+import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue';
+import MenuIcon from 'vue-material-design-icons/Menu.vue';
+import AccountCircleIcon from 'vue-material-design-icons/AccountCircle.vue';
+import CloseIcon from 'vue-material-design-icons/Close.vue';
+import ChevronRightIcon from 'vue-material-design-icons/ChevronRight.vue';
 
-const showingNavigationDropdown = ref(false);
+let showMenu = ref(false);
 </script>
 
 <template>
@@ -21,7 +24,8 @@ const showingNavigationDropdown = ref(false);
                 </Link>
             </div>
 
-            <div class="text-white h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+            <div
+                class="text-white h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
                 <div class="flex items-center justify-center">
                     <MapMarketOutlineIcon class="pt-2 -ml-1" fill-color="#f5f5f5"/>
                     <div>
@@ -36,7 +40,8 @@ const showingNavigationDropdown = ref(false);
             </div>
 
             <div class="flex grow items-center h-[45px] px-1">
-                <div class="flex items-center justify-center bg-gray-100 border-r-gray-300 font-extrabold text-[11px] w-[60px] h-[40px] rounded-l-md cursor-pointer">
+                <div
+                    class="flex items-center justify-center bg-gray-100 border-r-gray-300 font-extrabold text-[11px] w-[60px] h-[40px] rounded-l-md cursor-pointer">
                     <div class="pt-[3px]">
                         All
                     </div>
@@ -49,17 +54,19 @@ const showingNavigationDropdown = ref(false);
                 </div>
             </div>
             <div class="flex">
-                <div class="h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                <div
+                    class="h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
                     <div class="items-center flex justify-center mt-2.5 px-1">
                         <img src="https://via.placeholder.com/35x20" alt="">
                         <div class="text-[15px] text-white -mt-2 -mr-0.5 font-extrabold">
                             EN
                         </div>
-                            <MenuDownIcon fill-color="#C2C2C2" :size="20" class="-mr-4 -mt-1.5 pr-1"/>
+                        <MenuDownIcon fill-color="#C2C2C2" :size="20" class="-mr-4 -mt-1.5 pr-1"/>
                     </div>
                 </div>
 
-                <div class="h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                <div
+                    class="h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
                     <div class="flex items-center justify-center">
                         <div>
                             <div class="text-white text-[12px] font-extrabold">
@@ -76,7 +83,8 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
 
-                <div class="h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                <div
+                    class="h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
                     <div class="flex items-center justify-center">
                         <div>
                             <div class="text-white text-[12px] font-extrabold">
@@ -91,7 +99,8 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
 
-                <div class="relative h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                <div
+                    class="relative h-[50px] p-2 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
                     <span class="absolute text-center right-[21px] w-[14px] -top-0 rounded-full text-[20px]">
                         <div class="text-orange-400 font-extrabold bg-gray-900 h-[16px]">
                             0
@@ -106,40 +115,48 @@ const showingNavigationDropdown = ref(false);
 
         <div class="flex items-center justify-between bg-[#232f3e] h-[38px] mt-[60px] w-full min-w-[1150px] fixed z-40">
             <div class="flex">
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    @click="showMenu = true"
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <MenuIcon fill-color="#F5F5F5" :size="26" class="mr-0.5"/>
                         <div class="text-white text-[14px] font-extrabold">All</div>
                     </div>
                 </div>
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <div class="text-white text-[14px] font-extrabold">Today's Deals</div>
                     </div>
                 </div>
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <div class="text-white text-[14px] font-extrabold">Gift Cards</div>
                     </div>
                 </div>
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <div class="text-white text-[14px] font-extrabold">Buy Again</div>
                     </div>
                 </div>
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <div class="text-white text-[14px] font-extrabold">Customer Service</div>
                     </div>
                 </div>
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <div class="text-white text-[14px] font-extrabold">Drazen's Amazon.com</div>
                     </div>
                 </div>
             </div>
             <div class="flex">
-                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
+                <div
+                    class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-gray-100 hover:border-[1px] cursor-pointer">
                     <div class="flex items-center justify-between px-2">
                         <div class="text-white text-[14px] font-extrabold">Holiday Fashion Deals</div>
                     </div>
@@ -149,7 +166,7 @@ const showingNavigationDropdown = ref(false);
 
         <main class="max-w-[1500px] mx-auto">
             <div class="pt-[98px]"></div>
-            <slot />
+            <slot/>
         </main>
 
         <div class="w-full bg-white mt-10">
@@ -162,7 +179,8 @@ const showingNavigationDropdown = ref(false);
                         <div class="w-[158px] h-[150px] overflow-hidden">
                             <img src="https://via.placeholder.com/158x150" alt="">
                         </div>
-                        <div class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
+                        <div
+                            class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
                             This is the test title
                         </div>
                         <div class="flex justify-start">
@@ -174,7 +192,8 @@ const showingNavigationDropdown = ref(false);
         </div>
 
         <footer class="bg-[#232F3E]">
-            <div class="bg-[#37475A] hover:bg-gray-600 w-full p-3.5 cursor-pointer text-white font-extrabold text-center">
+            <div
+                class="bg-[#37475A] hover:bg-gray-600 w-full p-3.5 cursor-pointer text-white font-extrabold text-center">
                 Back to top
             </div>
             <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-white">
@@ -218,7 +237,9 @@ const showingNavigationDropdown = ref(false);
                     <li class="hover:underline cursor-pointer">Track Packages or View Orders</li>
                     <li class="hover:underline cursor-pointer">Delivery Rates & Policies</li>
                     <li class="hover:underline cursor-pointer">Returns & Replacements</li>
-                    <li class="hover:underline cursor-pointer">Recycling (including disposal of electrical and electronic equipment)</li>
+                    <li class="hover:underline cursor-pointer">Recycling (including disposal of electrical and
+                        electronic equipment)
+                    </li>
                     <li class="hover:underline cursor-pointer">Manage Your Content and Devices</li>
                     <li class="hover:underline cursor-pointer">Amazon Mobile App</li>
                     <li class="hover:underline cursor-pointer">Amazon Assistant</li>
@@ -228,6 +249,34 @@ const showingNavigationDropdown = ref(false);
                 </ul>
             </div>
         </footer>
-
+    </div>
+    <div
+        v-if="showMenu"
+        class="top-0 z-50 fixed w-full h-full bg-black bg-opacity-70"
+        :class="[showMenu ? 'animate__animated animate__fadeIn animate__faster' : '']"
+    >
+        <CloseIcon
+            @click="showMenu = false"
+            :size="30"
+            fill-color="#DCDCDC"
+            class="left-80 z-50 ml-2.5 mt-3.5 cursor-pointer fixed"
+            :class="[showMenu ? 'animate__animated animate__slideInLeft animate__faster' : '']"
+        />
+        <div
+            :class="[showMenu ? 'animate__animated animate__fadeIn animate__faster' : '']"
+            class="w-80 h-full bg-white"
+        >
+            <div class="bg-[#232f3e] font-extrabold flex items-center text-[18px] text-white pl-7 p-2">
+                <span>Hello, Sign in</span>
+            </div>
+            <div class="text-[16px] font-extrabold pb-1 pt-3 pr-3 pl-6 text-black">
+                Shop by Department
+            </div>
+            <div class="hover:bg-gray-200 pr-3 pl-6">
+                <div class="items-center justify-between flex text-black py-2.5 hover:bg-gray-200 cursor-pointer">
+                    Computers <ChevronRightIcon :size="20" fill-color="#808080"/>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
