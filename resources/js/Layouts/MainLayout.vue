@@ -21,7 +21,7 @@ const accountAndListFunc = (bool) => {
 
 <template>
     <div class="min-w-[1150px] bg-gray-100 h-full">
-        <div v-if="accountAndList" class="top-0 z-20 w-full h-full bg-black bg-opacity-70"></div>
+        <div v-if="accountAndList" class="top-0 z-20 w-full h-full bg-black bg-opacity-70 absolute"></div>
         <div class="flex items-center bg-gray-900 h-[60px] py-2 fixed z-50 w-full min-w-[1150px]">
 
             <div class="flex">
