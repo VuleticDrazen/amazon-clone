@@ -10,9 +10,9 @@ import {Carousel, Navigation, Slide} from "vue3-carousel";
 
     <MainLayout>
         <Carousel :items-to-show="1" :wrap-around="true">
-            <Slide v-for="slide in 10" :key="slide">
+            <Slide v-for="slide in 6" :key="slide">
                 <div class="carousel__item">
-                    <img src="https://via.placeholder.com/3000x1200.png/004466?text=Testing" alt="">
+                    <img id="slider" :src="`/images/carousel/slide${slide}.jpg`" alt="">
                 </div>
             </Slide>
 
