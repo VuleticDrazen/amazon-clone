@@ -86,18 +86,26 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password_confirmation" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    :href="route('login')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Already registered?
-                </Link>
-
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Register
+            <div class="my-3">
+                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    Continue
                 </PrimaryButton>
             </div>
+
+            <div class="pt-4 text-xs">
+                By signing-in you agree to Amazon's Conditions of Use & Sale.
+                Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+            </div>
+
+            <div class="flex items-center justify-start mt-4">
+                <Link
+                    :href="route('login')"
+                    class="hover:underline text-sm text-blue-700 hover:text-red-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                    Sign in ?
+                </Link>
+            </div>
+
         </form>
     </GuestLayout>
 </template>
