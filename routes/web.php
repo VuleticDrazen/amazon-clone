@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -32,7 +33,10 @@ Route::get('/', function () {
 })->name('dashboard');
 
 Route::get('/categories/{category}', [CategoryController::class, 'index'])->name('categories.index');
+Route::resource('/address', AddressController::class);
+
 Route::resource('products', ProductController::class);
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
