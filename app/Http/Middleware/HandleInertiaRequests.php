@@ -35,7 +35,7 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             'auth' => [
                 'user' => auth()->check() ? auth()->user() : null,
-                'address' => auth()->check() ? auth()->user()->address : null,
+                'address' => auth()->check() ? auth()->user()->address()->first() : null,
             ],
             'categories' => Category::all(),
             'random_products' => Product::inRandomOrder()->limit(8)->get(),

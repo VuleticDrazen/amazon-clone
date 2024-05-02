@@ -1,9 +1,24 @@
 <script setup>
-import {Head, Link} from '@inertiajs/vue3';
+import {Head, useForm, usePage} from '@inertiajs/vue3';
 import MainLayout from "@/Layouts/MainLayout.vue";
-import PlusIcon from "vue-material-design-icons/Plus.vue"
 import InputLabel from "@/Components/InputLabel.vue";
+import TextInput from "@/Components/TextInput.vue";
 
+const form = useForm({
+    country: 'Montenegro',
+    first_name: usePage().props.auth.user.first_name,
+    last_name: usePage().props.auth.user.last_name,
+    street: '',
+    flat_number: '',
+    city: '',
+    postcode: ''
+})
+
+const submit = () => {
+    form.post(route('address.store'), {
+        onFinish: () => route('address.index')
+    })
+}
 </script>
 
 <template>
@@ -12,9 +27,10 @@ import InputLabel from "@/Components/InputLabel.vue";
     <MainLayout>
         <div class="max-w-[500px] mt-8 mx-auto font-extrabold text-2xl">
             <div>Add a new Address</div>
-            <form>
+            <form @submit.prevent="submit">
                 <div class="text-[15px] -mb-1.5 font-extrabold">Country</div>
-                <select name="country"
+                <select v-model="form.country"
+                        name="country"
                         class="w-full border-gray-300 rounded-lg shadow-md py-1 bg-gray-200
                          hover:bg-gray-300 cursor-pointer focus:border-orange-400 focus:ring-orange-400">
                     <option value="ME" selected>Montenegro</option>
@@ -25,34 +41,34 @@ import InputLabel from "@/Components/InputLabel.vue";
                 </select>
 
                 <div class="mt-4">
-                    <InputLabel class="-mb-1.5" value="First name"/>
-                    <TextInput class="-mb-1.5 block w-full" type="text" required/>
+                    <InputLabel value="First name"/>
+                    <TextInput v-model="form.first_name" class="-mb-1.5 block w-full" type="text" required/>
                 </div>
                 <div class="mt-2">
-                    <InputLabel class="-mb-1.5" value="Last name"/>
-                    <TextInput class="-mb-1.5 block w-full" type="text" required/>
+                    <InputLabel value="Last name"/>
+                    <TextInput v-model="form.last_name" class="-mb-1.5 block w-full" type="text" required/>
                 </div>
                 <div class="mt-2">
                     <div class="flex gap-2">
                         <div class="w-4/5">
-                            <InputLabel class="-mb-1.5" value="Street address"/>
-                            <TextInput class="-mb-1.5 block w-full" type="text" required/>
+                            <InputLabel value="Street address"/>
+                            <TextInput v-model="form.street" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                         <div class="w-1/5">
-                            <InputLabel class="-mb-1.5" value="Flat number"/>
-                            <TextInput class="-mb-1.5 block w-full" type="text" required/>
+                            <InputLabel value="Flat number"/>
+                            <TextInput v-model="form.flat_number" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                     </div>
                 </div>
                 <div class="mt-2">
                     <div class="flex gap-2">
                         <div class="w-full">
-                            <InputLabel class="-mb-1.5" value="City"/>
-                            <TextInput class="-mb-1.5 block w-full" type="text" required/>
+                            <InputLabel value="City"/>
+                            <TextInput v-model="form.city" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                         <div class="w-full">
-                            <InputLabel class="-mb-1.5" value="Postcode"/>
-                            <TextInput class="-mb-1.5 block w-full" type="text" required/>
+                            <InputLabel value="Postcode"/>
+                            <TextInput v-model="form.postcode" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                     </div>
                 </div>
