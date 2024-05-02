@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
 
         CategorySeeder::run();
         ProductSeeder::run();
+        UserSeeder::run();
     }
 }
