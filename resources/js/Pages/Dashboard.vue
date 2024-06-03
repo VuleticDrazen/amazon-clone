@@ -24,16 +24,15 @@ import {Carousel, Navigation, Slide} from "vue3-carousel";
         <div class="relative -mt-[300px]">
             <div class="flex relative z-10 m-4">
                 <div class="bg-white p-2 mx-2 text-md w-full text-center">
-                    You are on Amazon clone
-                    <span class="underline text-teal-600 cursor-pointer">Click here to buy me a coffee</span>
+                   Pogledajte najnovije oglase iz sledećih kategorija
                 </div>
             </div>
             <div class="grid grid-cols-3 m-4 z-10 relative">
                 <div class="p-1.5 flex" v-for="cat in $page.props.categories" :key="cat">
-                    <Link :href="route('categories.index', {category: cat.id})" class="bg-white p-5">
+                    <Link :href="route('categories.index', {categoryId: cat.id, categoryName: cat.name })" class="bg-white p-5">
                         <div class="text-2xl font-extrabold flex">{{ cat.name }}</div>
                         <div class="flex">
-                            <img class="object-fill" :src="`/images/categories/${cat.id}.png`" alt="">
+                            <img class="object-fill" :src="cat.cover_image" alt="">
                         </div>
                         <div
                             class="pt-3 -mb-2 text-teal-800 font-bold hover:underline hover:text-red-400 cursor-pointer">

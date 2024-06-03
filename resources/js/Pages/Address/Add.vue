@@ -1,32 +1,28 @@
 <script setup>
-import {Head, useForm, usePage} from '@inertiajs/vue3';
-import MainLayout from "@/Layouts/MainLayout.vue";
+import {useForm} from '@inertiajs/vue3';
 import InputLabel from "@/Components/InputLabel.vue";
 import TextInput from "@/Components/TextInput.vue";
 
 const form = useForm({
-    country: 'Montenegro',
-    first_name: usePage().props.auth.user.first_name,
-    last_name: usePage().props.auth.user.last_name,
+    country: 'ME',
     street: '',
     flat_number: '',
     city: '',
-    postcode: ''
+    postcode: '',
+    first_name: '',
+    last_name: ''
 })
 
 const submit = () => {
-    form.post(route('address.store'), {
-        onFinish: () => route('address.index')
+    form.post(route('checkout.store'), {
+        onFinish: () => route('dashboard')
     })
 }
 </script>
 
 <template>
-    <Head title="Address"/>
-
-    <MainLayout>
         <div class="max-w-[500px] mt-8 mx-auto font-extrabold text-2xl">
-            <div>Add a new Address</div>
+            <div>Shipping Address</div>
             <form @submit.prevent="submit">
                 <div class="text-[15px] -mb-1.5 font-extrabold">Country</div>
                 <select v-model="form.country"
@@ -79,6 +75,4 @@ const submit = () => {
                 </div>
             </form>
         </div>
-    </MainLayout>
-
 </template>

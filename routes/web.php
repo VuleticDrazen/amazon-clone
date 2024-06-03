@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -31,8 +32,11 @@ Route::get('/', function () {
 Route::get('/', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+Route::get('/cart', function () {
+    return Inertia::render('Cart');
+})->name('cart.index');
 
-Route::get('/categories/{category}', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/{categoryId}/{categoryName}', [CategoryController::class, 'index'])->name('categories.index');
 Route::resource('/address', AddressController::class);
 
 Route::resource('products', ProductController::class);
@@ -43,4 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::resource('checkout', CheckoutController::class);
+//Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+//Route::post('checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 require __DIR__ . '/auth.php';

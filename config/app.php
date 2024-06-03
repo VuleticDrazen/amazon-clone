@@ -5,6 +5,9 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    'rural_shop_cms_url' => env('RURAL_SHOP_CMS_URL', 'http://localhost:8001/api'),
+    'rural_shop_ordering_url' => env('RURAL_SHOP_ORDERING_URL', 'http://localhost:8002/api'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

@@ -2,8 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Models\Category;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
@@ -37,8 +38,8 @@ class HandleInertiaRequests extends Middleware
                 'user' => auth()->check() ? auth()->user() : null,
                 'address' => auth()->check() ? auth()->user()->address()->first() : null,
             ],
-            'categories' => Category::all(),
-            'random_products' => Product::inRandomOrder()->limit(8)->get(),
+            'categories' => CategoryController::getAll(),
+            'random_products' => ProductController::randomAds(),
             'ziggy' => function () use ($request) {
                 return array_merge((new Ziggy)->toArray(), [
                     'location' => $request->url(),

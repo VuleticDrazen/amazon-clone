@@ -4,18 +4,20 @@ import {toRefs} from "vue";
 
 const props = defineProps({ product: Object });
 const product = toRefs(props.product);
+console.log('123')
+console.log(props)
 </script>
 
 <template>
     <div class="border-gray-300 border rounded-md bg-white p-1.5">
         <Link :href="route('products.show', {product: this.product})" class="w-full">
-            <img class="rounded-md" :src="product.image.value" alt="">
+            <img class="rounded-md" :src="product.cover_image.value" alt="">
             <div class="text-left">
                 <div class="text-[16px] text-gray-900 font-extrabold cursor-pointer">
-                    {{ product.title }}
+                    {{ product.title.value }}
                 </div>
                 <div class="flex justify-between items-center">
-                    <div class="text-2xl p-1 font-semibold w-full text-left">${{ product.price }}</div>
+                    <div class="text-2xl p-1 font-semibold w-full text-left">${{ product.price.value }}</div>
                     <img src="/images/logo/PRIME_LOGO.png" alt="prime" width="80">
                 </div>
                 <div class="flex justify-between items-center">
