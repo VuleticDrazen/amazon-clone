@@ -41,11 +41,11 @@ function goToPage(page) {
                 @click="goToPage(currentPage - 1)"
                 class="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                Previous
+                Prethodna
             </button>
 
             <div class="text-sm">
-                Page {{ currentPage }} of {{ lastPage }}
+                Stranica {{ currentPage }} of {{ lastPage }}
             </div>
 
             <button
@@ -53,7 +53,7 @@ function goToPage(page) {
                 @click="goToPage(currentPage + 1)"
                 class="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                Next
+                Sledeća
             </button>
         </div>
     </MainLayout>

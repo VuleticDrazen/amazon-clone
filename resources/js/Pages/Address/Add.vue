@@ -4,13 +4,13 @@ import InputLabel from "@/Components/InputLabel.vue";
 import TextInput from "@/Components/TextInput.vue";
 
 const form = useForm({
-    country: 'ME',
     street: '',
     flat_number: '',
     city: '',
     postcode: '',
     first_name: '',
-    last_name: ''
+    last_name: '',
+    email: ''
 })
 
 const submit = () => {
@@ -22,36 +22,28 @@ const submit = () => {
 
 <template>
         <div class="max-w-[500px] mt-8 mx-auto font-extrabold text-2xl">
-            <div>Shipping Address</div>
+            <div>Podaci za dostavu</div>
             <form @submit.prevent="submit">
-                <div class="text-[15px] -mb-1.5 font-extrabold">Country</div>
-                <select v-model="form.country"
-                        name="country"
-                        class="w-full border-gray-300 rounded-lg shadow-md py-1 bg-gray-200
-                         hover:bg-gray-300 cursor-pointer focus:border-orange-400 focus:ring-orange-400">
-                    <option value="ME" selected>Montenegro</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="US">United States</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
-                </select>
-
                 <div class="mt-4">
-                    <InputLabel value="First name"/>
+                    <InputLabel value="Ime"/>
                     <TextInput v-model="form.first_name" class="-mb-1.5 block w-full" type="text" required/>
                 </div>
                 <div class="mt-2">
-                    <InputLabel value="Last name"/>
+                    <InputLabel value="Prezime"/>
                     <TextInput v-model="form.last_name" class="-mb-1.5 block w-full" type="text" required/>
+                </div>
+                <div class="mt-2">
+                    <InputLabel value="Email"/>
+                    <TextInput v-model="form.email" class="-mb-1.5 block w-full" type="email" required/>
                 </div>
                 <div class="mt-2">
                     <div class="flex gap-2">
                         <div class="w-4/5">
-                            <InputLabel value="Street address"/>
+                            <InputLabel value="Ulica"/>
                             <TextInput v-model="form.street" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                         <div class="w-1/5">
-                            <InputLabel value="Flat number"/>
+                            <InputLabel value="Broj"/>
                             <TextInput v-model="form.flat_number" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                     </div>
@@ -59,18 +51,18 @@ const submit = () => {
                 <div class="mt-2">
                     <div class="flex gap-2">
                         <div class="w-full">
-                            <InputLabel value="City"/>
+                            <InputLabel value="Grad"/>
                             <TextInput v-model="form.city" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                         <div class="w-full">
-                            <InputLabel value="Postcode"/>
+                            <InputLabel value="Poštanski broj"/>
                             <TextInput v-model="form.postcode" class="-mb-1.5 block w-full" type="text" required/>
                         </div>
                     </div>
                 </div>
                 <div class="mt-6">
                     <button class="bg-yellow-400 text-[14px] shadow-sm rounded-lg font-bold px-3 cursor-pointer">
-                        Add address
+                        Potvrdi
                     </button>
                 </div>
             </form>

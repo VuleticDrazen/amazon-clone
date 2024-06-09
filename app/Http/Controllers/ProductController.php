@@ -42,8 +42,12 @@ class ProductController extends Controller
         $ads = json_decode($response->body(), true)['data'];
         dd($ads);
     }
-    public function show(Product $product)
+    public function show($product)
     {
+        $url = config('app.rural_shop_cms_url') . '/ads/'.$product;
+        $response = Http::get($url);
+
+        $product = json_decode($response->body(), true)['data'];
         return Inertia::render('Product', [
             'product' => $product
         ]);

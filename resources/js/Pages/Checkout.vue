@@ -14,7 +14,7 @@ const {cart} = storeToRefs(cartStore)
 const total = computed(() => {
     let total = 0
     cart.value.forEach(c => {
-        total += c.price
+        total += parseFloat(c.price) * c.amount
     })
     if (total > 0) {
         return total.toFixed(2)
@@ -30,10 +30,9 @@ const totalWithoutDot = () => {
 </script>
 
 <template>
-    <Head title="Checkout"/>
+    <Head title="Porudžbina"/>
 
     <MainLayout>
-        <div class="p-4 mt-2 max-w-[1250px] mx-auto text-3xl font-extrabold">Checkout</div>
         <div class="flex max-w-[1250px] mx-auto pt-4">
             <div class="w-2/3">
                 <div class=" border-b border-b-gray-300 w-[calc(100%-100px)] pb-4 pl-4 mb-6">

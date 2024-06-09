@@ -31,7 +31,7 @@ import {Carousel, Navigation, Slide} from "vue3-carousel";
                 <div class="p-1.5 flex" v-for="cat in $page.props.categories" :key="cat">
                     <Link :href="route('categories.index', {categoryId: cat.id, categoryName: cat.name })" class="bg-white p-5">
                         <div class="text-2xl font-extrabold flex">{{ cat.name }}</div>
-                        <div class="flex">
+                        <div class="flex h-[300px]">
                             <img class="object-fill" :src="cat.cover_image" alt="">
                         </div>
                         <div
