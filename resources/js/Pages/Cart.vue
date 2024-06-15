@@ -42,7 +42,7 @@ const totalWithoutDot = () => {
             </div>
 
             <div v-if="!cart.length" class="text-center font-bold text-2xl py-20">
-                Your Cart is empty
+                Korpa je prazna
             </div>
 
             <div v-else class="flex border-b" v-for="product in cart" :key="product">

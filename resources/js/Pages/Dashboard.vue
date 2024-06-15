@@ -11,9 +11,9 @@ import {Carousel, Navigation, Slide} from "vue3-carousel";
 
     <MainLayout>
         <Carousel :items-to-show="1" :wrap-around="true">
-            <Slide v-for="slide in 6" :key="slide">
+            <Slide v-for="slide in 5" :key="slide">
                 <div class="carousel__item">
-                    <img id="slider" :src="`/images/carousel/slide${slide}.jpg`" alt="">
+                    <img id="slider" :src="`/images/carousel/${slide}.png`" alt="">
                 </div>
             </Slide>
 
@@ -36,7 +36,7 @@ import {Carousel, Navigation, Slide} from "vue3-carousel";
                         </div>
                         <div
                             class="pt-3 -mb-2 text-teal-800 font-bold hover:underline hover:text-red-400 cursor-pointer">
-                            See more
+                            Vidi više
                         </div>
                     </Link>
                 </div>

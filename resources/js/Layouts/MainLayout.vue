@@ -54,8 +54,8 @@ const search = () => {
                     <div class="ml-2 text-black text-[15px] font-extrabold">
                         Korpa
                     </div>
-                    <span class="absolute text-center right-[24px] top-[5px] w-[16px] -top-0 rounded-full text-[12px]">
-                        <div class="text-orange-600 font-extrabold h-[18px]">
+                    <span class="absolute text-center right-[24px] w-[16px] -top-0 rounded-full text-[18px]">
+                        <div class="text-red-600 bg-white font-extrabold h-[18px]">
                             {{ cartStore.cart.length }}
                         </div>
                     </span>
@@ -103,52 +103,20 @@ const search = () => {
             </div>
             <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-white">
                 <ul>
-                    <li class="font-extrabold text-lg">Get to Know Us</li>
-                    <li class="hover:underline cursor-pointer">Careers</li>
-                    <li class="hover:underline cursor-pointer">About Amazon</li>
-                    <li class="hover:underline cursor-pointer">Investor Relations</li>
-                    <li class="hover:underline cursor-pointer">Amazon Devices</li>
-                    <li class="hover:underline cursor-pointer">Amazon Science</li>
+                    <li class="font-extrabold border-b border-white">Aplikacija za plasman poljoprivrednih proizoda</li>
+                    <li class="hover:underline">Master rad Nikole Ostojića</li>
                 </ul>
-                <div class="w-20"></div>
+                <div class="w-60"></div>
                 <ul>
-                    <li class="font-extrabold text-lg">Make Money with Us</li>
-                    <li class="hover:underline cursor-pointer">Sell products on Amazon</li>
-                    <li class="hover:underline cursor-pointer">Sell on Amazon Business</li>
-                    <li class="hover:underline cursor-pointer">Sell apps on amazon</li>
-                    <li class="hover:underline cursor-pointer">Become an Affiliate</li>
-                    <li class="hover:underline cursor-pointer">Advertise Your Products</li>
-                    <li class="hover:underline cursor-pointer">Self-Publish with Us</li>
-                    <li class="hover:underline cursor-pointer">Host an Amazon Hub</li>
+                    <li class="font-extrabold border-b border-white">Ova aplikacija je razvijena kao dio master rada na temu:</li>
+                    <li class="hover:underline">"Primjena koncepta mikroservisne arhitekture i kontejnerizacije u web aplikaciji za plasman poljoprivrednih proizvoda".</li>
                 </ul>
-                <div class="w-20"></div>
+                <div class="w-60"></div>
                 <ul>
-                    <li class="font-extrabold text-lg">Amazon Payment Methods</li>
-                    <li class="hover:underline cursor-pointer">Amazon.de Visa Card</li>
-                    <li class="hover:underline cursor-pointer">Shop with points</li>
-                    <li class="hover:underline cursor-pointer">Credit Card</li>
-                    <li class="hover:underline cursor-pointer">Gift Cards</li>
-                    <li class="hover:underline cursor-pointer">Payment by Invoice</li>
-                    <li class="hover:underline cursor-pointer">Direct Debit</li>
-                    <li class="hover:underline cursor-pointer">Amazon Currency Converter</li>
-                    <li class="hover:underline cursor-pointer">Top Up Your Account</li>
-                </ul>
-                <div class="w-20"></div>
-                <ul>
-                    <li class="font-extrabold text-lg">Let Us Help You</li>
-                    <li class="hover:underline cursor-pointer">COVID-19 and Amazon</li>
-                    <li class="hover:underline cursor-pointer">Track Packages or View Orders</li>
-                    <li class="hover:underline cursor-pointer">Delivery Rates & Policies</li>
-                    <li class="hover:underline cursor-pointer">Returns & Replacements</li>
-                    <li class="hover:underline cursor-pointer">Recycling (including disposal of electrical and
-                        electronic equipment)
-                    </li>
-                    <li class="hover:underline cursor-pointer">Manage Your Content and Devices</li>
-                    <li class="hover:underline cursor-pointer">Amazon Mobile App</li>
-                    <li class="hover:underline cursor-pointer">Amazon Assistant</li>
-                    <li class="hover:underline cursor-pointer">Customer Service</li>
-                    <li class="hover:underline cursor-pointer">Cancel Vodafone contracts</li>
-                    <li class="hover:underline cursor-pointer">Accessibility</li>
+                    <li class="font-extrabold border-b border-white">Autor: Nikola Ostojić</li>
+                    <li class="hover:underline border-b border-white">Master studije, Studije Primijenog računarstva</li>
+                    <li class="hover:underline border-b border-white">Elektrotehnički fakultet, Podgorica</li>
+                    <li class="hover:underline">© 2024 Nikola Ostojić. Sva prava zadržana.</li>
                 </ul>
             </div>
         </footer>
