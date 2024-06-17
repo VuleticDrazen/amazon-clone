@@ -31,7 +31,7 @@ class ProductController extends Controller
 
         shuffle($ads);
 
-        return array_slice($ads, 0, 8);
+        return array_slice($ads, 0, 7);
 
     }
 
