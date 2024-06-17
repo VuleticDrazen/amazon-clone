@@ -10,7 +10,7 @@ console.log(props)
 
 <template>
     <div class="border-gray-300 border rounded-md bg-white p-1.5">
-        <Link :href="route('products.show', {product: this.product})" class="w-full">
+        <Link :href="route('products.show', {product: product})" class="w-full">
             <img class="rounded-md object-fill h-[300px]" :src="product.cover_image.value" alt="">
             <div class="text-left">
                 <div class="text-[16px] text-gray-900 font-extrabold cursor-pointer">
