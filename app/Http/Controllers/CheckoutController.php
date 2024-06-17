@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CheckoutRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Inertia\Inertia;
 
@@ -13,8 +14,9 @@ class CheckoutController extends Controller
         return Inertia::render('Checkout');
     }
 
-    public function store(CheckoutRequest $request)
+    public function store(Request $request)
     {
+        dd($request->all());
         $orderingUrl = config('app.rural_shop_ordering_url') . '/orders';
         $response = Http::post($orderingUrl, $request->validated());
 

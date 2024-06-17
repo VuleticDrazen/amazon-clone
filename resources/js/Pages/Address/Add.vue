@@ -16,6 +16,7 @@ const form = useForm({
 const submit = () => {
     form.post(route('checkout.store'), {
         onFinish: () => route('dashboard')
+    }, () => {
     })
 }
 </script>
