@@ -48,6 +48,7 @@ class ProductController extends Controller
         $response = Http::get($url);
 
         $product = json_decode($response->body(), true)['data'];
+
         return Inertia::render('Product', [
             'product' => $product
         ]);

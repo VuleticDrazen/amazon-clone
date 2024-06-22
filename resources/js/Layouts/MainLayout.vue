@@ -88,7 +88,7 @@ const search = () => {
                         </Link>
                         <div class="flex justify-start">
                             <div class="text-s font-extrabold text-red-600 w-full text-center">
-                                {{ product.price }} €
+                                {{ product.price }} € / {{ product.unit }}
                             </div>
                         </div>
                     </div>
@@ -96,28 +96,18 @@ const search = () => {
             </div>
         </div>
 
-        <footer class="bg-[#232F3E]">
+        <footer class="bg-[#023018]">
             <div @click="scrollToTop"
                  class="bg-[#37475A] hover:bg-gray-600 w-full p-3.5 cursor-pointer text-white font-extrabold text-center">
                 Vrati na vrh
             </div>
-            <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-white">
-                <ul>
-                    <li class="font-extrabold border-b border-white">Aplikacija za plasman poljoprivrednih proizoda</li>
-                    <li class="hover:underline">Master rad Nikole Ostojića</li>
-                </ul>
-                <div class="w-60"></div>
-                <ul>
-                    <li class="font-extrabold border-b border-white">Ova aplikacija je razvijena kao dio master rada na temu:</li>
-                    <li class="hover:underline">"Primjena koncepta mikroservisne arhitekture i kontejnerizacije u web aplikaciji za plasman poljoprivrednih proizvoda".</li>
-                </ul>
-                <div class="w-60"></div>
-                <ul>
-                    <li class="font-extrabold border-b border-white">Autor: Nikola Ostojić</li>
-                    <li class="hover:underline border-b border-white">Master studije, Studije Primijenog računarstva</li>
-                    <li class="hover:underline border-b border-white">Elektrotehnički fakultet, Podgorica</li>
-                    <li class="hover:underline">© 2024 Nikola Ostojić. Sva prava zadržana.</li>
-                </ul>
+            <div class="max-w-[1000px] mx-auto p-10 text-white">
+                <p class="font-extrabold">Aplikacija za plasman poljoprivrednih proizoda | Master rad Nikole Ostojića</p>
+                <p>Ova aplikacija je razvijena kao dio master rada na temu: <span class="font-extrabold">"Primjena koncepta mikroservisne arhitekture i kontejnerizacije u web aplikaciji za plasman poljoprivrednih proizvoda".</span></p>
+                <p>Autor: Nikola Ostojić</p>
+                <p>Master studije, Studije Primijenog računarstva</p>
+                <p>Elektrotehnički fakultet, Podgorica</p>
+                <p>© 2024 Nikola Ostojić. Sva prava zadržana.</p>
             </div>
         </footer>
     </div>

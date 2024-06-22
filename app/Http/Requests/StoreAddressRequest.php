@@ -25,7 +25,7 @@ class StoreAddressRequest extends FormRequest
             'street' => ['required', 'string', 'max:255'],
             'flat_number' => ['required', 'string', 'max:12'],
             'city' => ['required', 'string', 'max:255'],
-            'postcode' => ['required', 'string', 'max:8'],
+            'phone_number' => ['required', 'string', 'max:8'],
             'country' => ['required', 'string', 'max:255'],
         ];
     }

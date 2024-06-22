@@ -60,7 +60,7 @@ const totalWithoutDot = () => {
                     </div>
 
                     <div class="py-6 justify-center pl-20">
-                        <div class="font-bold">Cijena {{ product.price }} € </div>
+                        <div class="font-bold">Cijena {{ product.price }} € / {{ product.unit }} </div>
                         <div class="font-bold">Količina : {{ product.amount }}</div>
                     </div>
                 </div>

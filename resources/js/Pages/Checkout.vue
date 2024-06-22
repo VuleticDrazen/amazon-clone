@@ -26,7 +26,7 @@ const form = useForm({
     street: '',
     flat_number: '',
     city: '',
-    postcode: '',
+    phone_number: '',
     first_name: '',
     last_name: '',
     email: '',
@@ -108,8 +108,8 @@ const submit = () => {
                                                        required/>
                                         </div>
                                         <div class="w-full">
-                                            <InputLabel value="Poštanski broj"/>
-                                            <TextInput v-model="form.postcode" class="-mb-1.5 block w-full" type="text"
+                                            <InputLabel value="Kontakt telefon"/>
+                                            <TextInput v-model="form.phone_number" class="-mb-1.5 block w-full" type="text"
                                                        required/>
                                         </div>
                                     </div>

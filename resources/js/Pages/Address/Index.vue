@@ -46,7 +46,7 @@ import PlusIcon from "vue-material-design-icons/Plus.vue"
                 <div class="text-sm px-4">
                     <div>{{ $page.props.auth.address?.street }}</div>
                     <div>{{ $page.props.auth.address?.flat_number }}</div>
-                    <div>{{ $page.props.auth.address?.postcode }}</div>
+                    <div>{{ $page.props.auth.address?.phone_number }}</div>
                     <div>{{ $page.props.auth.address?.city }}</div>
                     <div>{{ $page.props.auth.address?.country }}</div>
                 </div>

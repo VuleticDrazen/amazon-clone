@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('street');
             $table->string('flat_number');
             $table->string('city');
-            $table->string('postcode');
+            $table->string('phone_number');
             $table->string('country');
             $table->timestamps();
         });
