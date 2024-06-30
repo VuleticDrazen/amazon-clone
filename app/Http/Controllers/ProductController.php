@@ -35,13 +35,6 @@ class ProductController extends Controller
 
     }
 
-    public static function getByCategoryId($categoryId)
-    {
-        $url = config('app.rural_shop_cms_url') . '/ads' . '&category_id=' . $categoryId;
-        $response = Http::get($url);
-        $ads = json_decode($response->body(), true)['data'];
-        dd($ads);
-    }
     public function show($product)
     {
         $url = config('app.rural_shop_cms_url') . '/ads/'.$product;

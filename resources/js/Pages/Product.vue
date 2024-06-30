@@ -118,11 +118,12 @@ const isCurrentImage = (index) => {
                 <div class="border border-gray-300 rounded-lg p-4">
                     <div class="text-red-600 text-sm font-bold mb-2">Cijena: {{ product.price }} € / {{ product.unit }}</div>
                     <div class="flex items-center mb-4">
-                        <input type="number" v-model="amount" min="1" class="border rounded px-2 py-1 w-16 mr-2"/>
+                        <input v-if="!isAlreadyInCart" type="number" v-model="amount" min="1" class="border rounded px-2 py-1 w-16 mr-2"/>
                         <button
                             :disabled="isAlreadyInCart"
                             @click="addToCart(product)"
-                            class="bg-yellow-400 px-4 py-2 font-bold text-sm rounded-lg border shadow-md cursor-pointer">
+                            class="px-4 py-2 font-bold text-sm rounded-lg border shadow-md"
+                            :class="isAlreadyInCart ? 'cursor bg-white-300' : 'cursor-pointer bg-yellow-400' ">
                             <span v-if="isAlreadyInCart">Dodato u korpu</span>
                             <span v-else>Dodaj u korpu</span>
                         </button>

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CheckoutRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Inertia\Inertia;
 
@@ -14,16 +13,17 @@ class CheckoutController extends Controller
         return Inertia::render('Checkout');
     }
 
-    public function store(Request $request)
+    public function store(CheckoutRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
     {
-        dd($request->all());
         $orderingUrl = config('app.rural_shop_ordering_url') . '/orders';
         $response = Http::post($orderingUrl, $request->validated());
 
+
         if ($response->successful()) {
-            dd($response);
+            return response()->json(['message'=>'Uspješno ste kreirali porudžbinu!']);
         } else {
-            dd($response->body(), $response->status());
+            return response()->json(['message'=>'Došlo je do greške.'], 500);
         }
     }
+
 }
