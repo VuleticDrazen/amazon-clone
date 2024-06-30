@@ -7,7 +7,9 @@ export const useCartStore = defineStore('cart', {
             this.cart.forEach((product, index) =>{
                if (product.id === productId) this.cart.splice(index, 1)
             })
-        }
+        },
+        emptyCart(){
+            this.cart = [];        }
     },
     persist: true
 })

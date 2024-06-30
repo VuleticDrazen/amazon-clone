@@ -43,6 +43,7 @@ const form = useForm({
                 name: item.user_name,
                 email: item.user_email,
                 city: item.city,
+                address: item.address,
                 phone: item.phone_number,
             },
 
@@ -66,6 +67,7 @@ async function sendOrder(page = 1) {
 
 function closeModal() {
     isSubmitted.value = false;
+    cartStore.emptyCart();
     location.replace('/')
 }
 </script>
